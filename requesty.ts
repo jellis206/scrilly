@@ -37,13 +37,10 @@ export async function getAllAirportCodes(): Promise<string[]> {
 
   try {
     await client.connect();
-    console.log('✅ Connected successfully to MongoDB');
-
     const db = client.db(DB_NAME);
     // Use the generic <Airport> to tell TypeScript what shape your documents have
     const collection: Collection<Airport> =
       db.collection<Airport>(COLLECTION_NAME);
-
     // Projection to fetch ONLY the desired property to minimize network traffic.
     const projection = {
       [PROPERTY_TO_GET]: 1,
@@ -119,46 +116,67 @@ function getDates(): { checkIn: string; checkOut: string } {
   };
 }
 
-export async function getAvailabilityForAll(): Promise<PropertyAvailability[]> {
+export async function getAvailabilityForAll(occupancy: string[]): Promise<{
+  [key: string]: PropertyAvailability[];
+}> {
   const airports = await getAllAirportCodes();
   const { checkIn, checkOut } = getDates();
-  const allAvailability: PropertyAvailability[] = [];
 
+  // 1. Create an array of promises.
   const promises = airports.map((airportCode) => {
     const reqBody = {
       airportCode,
       checkIn,
       checkOut,
-      salesChannel: 'website',
-      occupancy: ['2-2']
+      occupancy,
+      salesChannel: 'website'
     };
     return fetchAvailability(reqBody);
   });
 
+  // 2. Await all promises. The results will be in the same order as the `airports` array.
   const results = await Promise.all(promises);
 
-  for (const res of results) {
-    if ('availability' in res && res.availability) {
-      allAvailability.push(...res.availability);
-    } else if ('message' in res) {
+  // 3. Create an empty object to store the final mapped data.
+  const availabilityByAirport: { [key: string]: PropertyAvailability[] } = {};
+
+  // 4. Loop through the airports and results together using their shared index.
+  results.forEach((res, i) => {
+    const airportCode = airports[i];
+
+    // Check if the individual API call was successful
+    if (airportCode && 'availability' in res && res.availability) {
+      // Assign the availability data to the correct airport key in our object
+      availabilityByAirport[airportCode] = res.availability;
+    } else if ('message' in res && res.message) {
+      // Handle the error for the specific airport that failed
+      const errorMessage = res?.message || 'Unknown error';
       console.error({
-        message: `Failed to get availability for an airport code: ${res.message}`
+        message: `Failed to get availability for airport code '${airportCode}' with ${occupancy}, ${errorMessage}`
       });
     }
-  }
+  });
 
-  return allAvailability;
+  return availabilityByAirport;
 }
 
 async function main() {
+  const args: string[] = process.argv;
+  const occupancy = args[2] || '1';
   console.log(
     JSON.stringify(
-      filterByAllowlist(await getAvailabilityForAll(), [
-        'cancel_penalties',
-        'nonrefundable_date_ranges',
-        'propertyName',
-        'propertyId'
-      ]),
+      {
+        [occupancy]: filterByAllowlist(
+          await getAvailabilityForAll([occupancy]),
+          [
+            'iata_code',
+            'cancel_penalties',
+            'nonrefundable_date_ranges',
+            'propertyName',
+            'propertyId'
+          ]
+        )
+      },
       null,
       2
     )

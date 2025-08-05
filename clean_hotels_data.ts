@@ -15,7 +15,7 @@ export function removePropRecursively(obj: any, keyMatches: string[]): any {
   for (const [key, value] of Object.entries(obj)) {
     // Check if any of the keyMatches strings are found in the key (case insensitive)
     const shouldSkip = keyMatches.some((match) =>
-      key.toLowerCase().includes(match.toLowerCase()),
+      key.toLowerCase().includes(match.toLowerCase())
     );
 
     if (shouldSkip) {
@@ -27,61 +27,67 @@ export function removePropRecursively(obj: any, keyMatches: string[]): any {
 }
 
 export function filterByAllowlist(data: any, allowlist: string[]): any {
-  // Return primitives, null, or functions as they are, since they can't be filtered further.
-  if (data === null || typeof data !== 'object') {
-    return data;
-  }
+  /**
+   * This is the internal recursive function that does the actual work.
+   * It includes a flag `isAncestorAllowlisted` to track if we are currently inside a branch
+   * that has already been approved for keeping.
+   *
+   * @param currentData The data at the current level of recursion.
+   * @param isAncestorAllowlisted True if a parent key was on the allowlist.
+   * @returns The filtered data, or null if nothing from this branch should be kept.
+   */
+  function recursiveFilter(
+    currentData: any,
+    isAncestorAllowlisted: boolean
+  ): any {
+    // If a parent was on the allowlist, we keep this entire branch without further checks.
+    if (isAncestorAllowlisted) {
+      return currentData;
+    }
 
-  // If the data is an array, recursively process each item.
-  if (Array.isArray(data)) {
-    return (
-      data
-        .map((item) => filterByAllowlist(item, allowlist))
-        // After mapping, filter out any "empty" results (e.g., an object that had all its keys removed).
-        .filter((item) => {
-          if (item === null || item === undefined) return false;
-          // Keep primitives (strings, numbers, etc.) that might be in an array.
-          if (typeof item !== 'object') return true;
-          // Keep non-empty arrays.
-          if (Array.isArray(item)) return item.length > 0;
-          // Keep non-empty objects.
-          return Object.keys(item).length > 0;
-        })
-    );
-  }
+    // Primitives (string, number, etc.) cannot contain allowlisted keys themselves.
+    // So, if we are here and a parent wasn't allowlisted, this path is a dead end.
+    if (currentData === null || typeof currentData !== 'object') {
+      return null;
+    }
 
-  // If the data is an object, build a new object containing only allowed properties.
-  const newObj: { [key: string]: any } = {};
-  for (const key in data) {
-    if (Object.prototype.hasOwnProperty.call(data, key)) {
-      const value = data[key];
+    // --- Handle Arrays ---
+    if (Array.isArray(currentData)) {
+      const newArray = currentData
+        .map((item) => recursiveFilter(item, false)) // Process each item
+        .filter((item) => item !== null); // Remove items that were filtered out
 
-      // --- Main Logic ---
-      // Case 1: The key is in our allowlist.
-      // We keep the key and its entire value without filtering its children further.
-      if (allowlist.includes(key)) {
-        newObj[key] = value;
-      }
-      // Case 2: The key is NOT in the allowlist, but its value is an object/array.
-      // We must recurse into it to see if any of its children are on the allowlist.
-      else if (typeof value === 'object') {
-        const filteredValue = filterByAllowlist(value, allowlist);
+      // If the array is empty after filtering, it's a dead end.
+      return newArray.length > 0 ? newArray : null;
+    }
 
-        // If the filtered value has any content left, we add it to our new object.
-        // This preserves the path to the nested, allowed property.
-        const hasContent =
-          filteredValue !== null &&
-          typeof filteredValue === 'object' &&
-          Object.keys(filteredValue).length > 0;
+    // --- Handle Objects ---
+    const newObj: { [key: string]: any } = {};
+    let hasContent = false;
 
-        if (hasContent) {
+    for (const key in currentData) {
+      if (Object.prototype.hasOwnProperty.call(currentData, key)) {
+        const value = currentData[key];
+        const isKeyAllowlisted = allowlist.includes(key);
+
+        // Recurse into the value. The `isAncestorAllowlisted` flag is true if EITHER
+        // the current key is allowlisted OR a higher-level ancestor was.
+        const filteredValue = recursiveFilter(value, isKeyAllowlisted);
+
+        // If the recursive call returned something, it means a valid path was found.
+        if (filteredValue !== null) {
           newObj[key] = filteredValue;
+          hasContent = true;
         }
       }
     }
+
+    // If the object is empty after filtering all its keys, it's a dead end.
+    return hasContent ? newObj : null;
   }
 
-  return newObj;
+  // Start the process.
+  return recursiveFilter(data, false);
 }
 
 // function processHotelData(filePath: string) {
