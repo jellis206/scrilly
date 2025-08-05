@@ -1,0 +1,217 @@
+{
+  "propertyId": "12035",
+  "propertyName": "Anaheim Marriott Hotel",
+  "propertyAddress": {
+    "line1": "700 W Convention Way",
+    "city": "Anaheim",
+    "state": "CA",
+    "zip": "92802"
+  },
+  "checkin": {
+    "begin_time": "4:00 PM",
+    "end_time": "midnight",
+    "instructions": "<ul>  <li>Extra-person charges may apply and vary depending on property policy</li><li>Government-issued photo identification and a credit card, debit card, or cash deposit may be required at check-in for incidental charges</li><li>Special requests are subject to availability upon check-in and may incur additional charges; special requests cannot be guaranteed</li><li>This property accepts credit cards; cash is not accepted</li><li>This property uses solar energy</li><li>Noise-free guestrooms cannot be guaranteed</li><li>This property has outdoor spaces, such as balconies, patios, terraces which may not be suitable for children; if you have concerns, we recommend contacting the property prior to your arrival to confirm they can accommodate you in a suitable room</li><li>This property affirms that it follows the cleaning and disinfection practices of Commitment to Clean (Marriott)</li><li>Please note that cultural norms and guest policies may differ by country and by property; the policies listed are provided by the property</li>  </ul>",
+    "special_instructions": "An adult age 18 or older must assume all liability for the booking. This property doesn't offer after-hours check-in. Front desk staff will greet guests on arrival at the property."
+  },
+  "checkout": {
+    "time": "11:00 AM"
+  },
+  "policies": {
+    "know_before_you_go": "<ul>  <li>The property has connecting/adjoining rooms, which are subject to availability and can be requested by contacting the property using the number on the booking confirmation. </li><li>Parking height restrictions apply. </li><li>This property welcomes guests of all sexual orientations and gender identities (LGBTQ+ friendly).</li> </ul>"
+  },
+  "fees": {
+    "optional": "<ul> <li>Fee for buffet breakfast: approximately USD 25 per person</li><li>Fee for in-room wireless internet: USD 14.95 per day (rates may vary)</li><li>Fee for in-room wired internet: USD 17.95 per day (rates may vary)</li><li>Self parking fee: USD 38 per night (in/out privileges)</li><li>Valet parking fee: USD 48 per day (in/out privileges)</li><li>Late check-out is available for a fee (subject to availability)</li><li>Rollaway bed fee: USD 30 per night</li></ul> <p>The above list may not be comprehensive. Fees and deposits may not include tax and are subject to change. </p>"
+  },
+  "attributes": {
+    "General": [
+      "Property follows a brand or regulatory agency's sanitization guidelines Commitment to Clean (Marriott)",
+      "LGBTQ friendly",
+      "No cribs (infant beds) available",
+      "Parking height restrictions apply",
+      "Noise-free rooms not guaranteed",
+      "Professional property host/manager"
+    ],
+    "Pets": [
+      "Service animals are exempt from fees/restrictions",
+      "Pets not allowed"
+    ]
+  },
+  "distanceToAirport": 8.88,
+  "amenities": [
+    {
+      "name": "Free WiFi",
+      "categories": ["wifi"]
+    },
+    {
+      "name": "Wheelchair accessible path of travel",
+      "categories": ["accessibility"]
+    },
+    {
+      "name": "Wheelchair accessible parking",
+      "categories": ["accessible_parking"]
+    },
+    {
+      "name": "Self parking (surcharge)",
+      "categories": ["parking"]
+    },
+    {
+      "name": "24-hour fitness facilities",
+      "categories": ["gym"]
+    }
+  ],
+  "descriptions": {
+    "amenities": "Be sure to enjoy recreational amenities, including an outdoor pool, a hot tub, and a 24-hour fitness center. This hotel also features complimentary wireless internet access, concierge services, and gift shops/newsstands.",
+    "attractions": "Distances are displayed to the nearest 0.1 mile and kilometer. <br /> <p>Anaheim Convention Center - 0.2 km / 0.1 mi <br /> Anaheim GardenWalk - 1.1 km / 0.7 mi <br /> House of Blues Anaheim - 1.4 km / 0.9 mi <br /> Disney California Adventure® Park - 1.7 km / 1.1 mi <br /> Downtown Disney® District - 1.8 km / 1.1 mi <br /> American Sports Center - 2.4 km / 1.5 mi <br /> Anaheim Indoor Marketplace - 2.5 km / 1.5 mi <br /> Great Wolf Lodge Water Park - 2.9 km / 1.8 mi <br /> Anaheim Global Medical Center - 3.2 km / 2 mi <br /> Christ Cathedral Campus - 3.3 km / 2 mi <br /> City National Grove of Anaheim - 3.5 km / 2.2 mi <br /> Twin Lakes Recreation Park - 3.6 km / 2.2 mi <br /> UC Irvine Medical Center - 3.8 km / 2.4 mi <br /> Crystal Cathedral - 3.9 km / 2.4 mi <br /> The Outlets at Orange - 4 km / 2.5 mi <br /> </p><p>The nearest airports are:<br />Fullerton, CA (FUL-Fullerton Municipal) - 14.1 km / 8.8 mi<br /> John Wayne Airport (SNA) - 19.7 km / 12.3 mi<br /> Long Beach Municipal Airport (LGB) - 28.5 km / 17.7 mi<br /> Los Angeles Intl. (LAX) - 58.4 km / 36.3 mi<br /> </p><p>The preferred airport for Anaheim Marriott Hotel is John Wayne Airport (SNA). </p>",
+    "business_amenities": "Featured amenities include a business center, express check-in, and express check-out. Planning an event in Anaheim? This hotel has 114892 square feet (10674 square meters) of space consisting of a conference center and 23 meeting rooms. Self parking (subject to charges) is available onsite.",
+    "dining": "Enjoy Californian cuisine at nFuse Restaurant, one of the hotel's many dining establishments, which include 2 restaurants and a coffee shop/cafe. Quench your thirst with your favorite drink at the bar/lounge. Buffet breakfasts are available daily from 6 AM to 11 AM for a fee.",
+    "headline": "Near Disney California Adventure® Park",
+    "location": "Anaheim Marriott Hotel is centrally located in Anaheim, a 3-minute walk from Anaheim Convention Center and 13 minutes by foot from Anaheim GardenWalk.  This hotel is 1.3 mi (2.1 km) from Disney California Adventure® Park and 1.5 mi (2.4 km) from Disneyland® Resort.",
+    "rooms": "Make yourself at home in one of the 1030 guestrooms featuring refrigerators and Smart televisions. Cable programming provides entertainment, and wired and wireless internet access is available for a surcharge. Private bathrooms with bathtubs or showers feature designer toiletries and hair dryers. Conveniences include phones, as well as laptop-compatible safes and desks."
+  },
+  "propertyRating": {
+    "rating": 4,
+    "type": "Star"
+  },
+  "guestRating": {
+    "count": 1914,
+    "overall": 8.8,
+    "cleanliness": 9.2,
+    "service": 9,
+    "comfort": 8.8,
+    "condition": 9,
+    "amenities": 8.8
+  },
+  "propertyCoordinates": {
+    "latitude": 33.798687,
+    "longitude": -117.918365
+  },
+  "propertyPhone": "1-714-750-8000",
+  "roomsAvailable": [
+    {
+      "room_name": "Room, 1 King Bed (Balcony)",
+      "amenities": [
+        {
+          "name": "Free WiFi",
+          "categories": ["wifi"]
+        },
+        {
+          "name": "Wheelchair accessible path of travel",
+          "categories": ["accessibility"]
+        },
+        {
+          "name": "Wheelchair accessible parking",
+          "categories": ["accessible_parking"]
+        },
+        {
+          "name": "Self parking (surcharge)",
+          "categories": ["parking"]
+        },
+        {
+          "name": "24-hour fitness facilities",
+          "categories": ["gym"]
+        }
+      ],
+      "occupancy": {
+        "age_categories": [
+          {
+            "name": "Adult",
+            "minimum_age": 12
+          },
+          {
+            "name": "ChildAgeA",
+            "minimum_age": 0
+          }
+        ],
+        "max_allowed": {
+          "total": 3,
+          "children": 2,
+          "adults": 3
+        }
+      }
+    },
+    {
+      "room_name": "Room, 2 Queen Beds (Balcony)",
+      "amenities": [
+        {
+          "name": "Free WiFi",
+          "categories": ["wifi"]
+        },
+        {
+          "name": "Wheelchair accessible path of travel",
+          "categories": ["accessibility"]
+        },
+        {
+          "name": "Wheelchair accessible parking",
+          "categories": ["accessible_parking"]
+        },
+        {
+          "name": "Self parking (surcharge)",
+          "categories": ["parking"]
+        },
+        {
+          "name": "24-hour fitness facilities",
+          "categories": ["gym"]
+        }
+      ],
+      "occupancy": {
+        "age_categories": [
+          {
+            "name": "Adult",
+            "minimum_age": 12
+          },
+          {
+            "name": "ChildAgeA",
+            "minimum_age": 0
+          }
+        ],
+        "max_allowed": {
+          "total": 4,
+          "children": 3,
+          "adults": 4
+        }
+      }
+    },
+    {
+      "room_name": "Concierge Room, Room, 1 King Bed, Non Smoking, Balcony",
+      "amenities": [
+        {
+          "name": "Free WiFi",
+          "categories": ["wifi"]
+        },
+        {
+          "name": "Wheelchair accessible path of travel",
+          "categories": ["accessibility"]
+        },
+        {
+          "name": "Wheelchair accessible parking",
+          "categories": ["accessible_parking"]
+        },
+        {
+          "name": "Self parking (surcharge)",
+          "categories": ["parking"]
+        },
+        {
+          "name": "24-hour fitness facilities",
+          "categories": ["gym"]
+        }
+      ],
+      "occupancy": {
+        "age_categories": [
+          {
+            "name": "Adult",
+            "minimum_age": 12
+          },
+          {
+            "name": "ChildAgeA",
+            "minimum_age": 0
+          }
+        ],
+        "max_allowed": {
+          "total": 3,
+          "children": 2,
+          "adults": 3
+        }
+      }
+    }
+  ]
+}

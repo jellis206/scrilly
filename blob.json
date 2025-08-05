@@ -1,0 +1,48 @@
+{
+  "propertyId": "19095",
+  "propertyName": "VEA Newport Beach, A Marriott Resort & Spa",
+  "propertyAddress": {
+    "line1": "900 Newport Center Dr",
+    "city": "Newport Beach",
+    "state": "CA",
+    "zip": "92660"
+  },
+  "checkin": {
+    "begin_time": "4:00 PM",
+    "end_time": "midnight",
+    "instructions": "<ul>  <li>Extra-person charges may apply and vary depending on property policy</li><li>Government-issued photo identification and a credit card, debit card, or cash deposit may be required at check-in for incidental charges</li><li>Special requests are subject to availability upon check-in and may incur additional charges; special requests cannot be guaranteed</li><li>This property accepts credit cards and cash</li>  </ul>",
+    "min_age": "21",
+    "special_instructions": "Front desk staff will greet guests on arrival at the property."
+  },
+  "checkout": {
+    "time": "11:00 AM"
+  },
+  "policies": {
+    "know_before_you_go": "<ul>  <li>Pool access available from 8:00 AM to 10:00 PM.</li><li>The property has connecting/adjoining rooms, which are subject to availability and can be requested by contacting the property using the number on the booking confirmation. </li><li>A car is recommended for transportation to and from this property. </li><li>This property welcomes guests of all sexual orientations and gender identities (LGBTQ+ friendly).</li> </ul>"
+  },
+  "fees": {
+    "mandatory": "<p>You'll be asked to pay the following charges at the property. Fees may include applicable taxes:</p> <ul><li>Resort fee: USD 57.50 per accommodation, per night</li></ul> The resort fee includes:<ul><li>Additional inclusions</li><li>Beach loungers</li><li>Beach towels</li><li>Fitness/yoga classes</li><li>Shuttle service</li></ul> <p>We have included all charges provided to us by the property. </p>",
+    "optional": "<ul> <li>Fee for continental breakfast: approximately USD 30 to 60 for adults, and USD 30 to 60 for children</li><li>Fee for in-room wireless internet: USD 14.95 per day (rates may vary)</li><li>Valet parking fee: USD 65 per day (in/out privileges)</li></ul> <p>The above list may not be comprehensive. Fees and deposits may not include tax and are subject to change. </p>"
+  },
+  "attributes": {
+    "General": [
+      "Professional property host/manager",
+      "LGBTQ friendly",
+      "No rollaway/extra beds available",
+      "Car recommended"
+    ],
+    "Pets": [
+      "Service animals are exempt from fees/restrictions",
+      "Pets not allowed"
+    ]
+  },
+  "descriptions": {
+    "amenities": "Be sure to enjoy recreational amenities, including an outdoor pool, a hot tub, and a sauna. Additional amenities at this hotel include concierge services, gift shops/newsstands, and wedding services.",
+    "attractions": "Distances are displayed to the nearest 0.1 mile and kilometer. <br /> <p>Fashion Island - 0.1 km / 0.1 mi <br /> Newport Dune - 2.5 km / 1.6 mi <br /> Corona del Mar State Beach - 3.4 km / 2.1 mi <br /> Little Corona Beach - 3.5 km / 2.2 mi <br /> Newport Harbor Nautical Museum - 3.8 km / 2.3 mi <br /> Balboa Fun Zone - 3.8 km / 2.4 mi <br /> Balboa Pier - 4.2 km / 2.6 mi <br /> Balboa Peninsula Beaches - 4.7 km / 2.9 mi <br /> Balboa Beach - 4.7 km / 2.9 mi <br /> The Wedge - 5 km / 3.1 mi <br /> Pelican Hill Golf Course - 4.4 km / 2.7 mi <br /> Crystal Cove State Park - 4.6 km / 2.8 mi <br /> Crystal Cove - 4.6 km / 2.8 mi <br /> Crystal Cove Beach - 4.8 km / 3 mi <br /> University of California, Irvine - 5.3 km / 3.3 mi <br /> </p><p>The nearest airports are:<br />John Wayne Airport (SNA) - 14.1 km / 8.8 mi<br /> Fullerton, CA (FUL-Fullerton Municipal) - 41.8 km / 26 mi<br /> Long Beach Municipal Airport (LGB) - 41.3 km / 25.6 mi<br /> </p><p>The preferred airport for VEA Newport Beach, A Marriott Resort & Spa is John Wayne Airport (SNA). </p>",
+    "business_amenities": "Featured amenities include a computer station, express check-in, and express check-out. Planning an event in Newport Beach? This hotel has 72981 square feet (6780 square meters) of space consisting of conference space and 27 meeting rooms.",
+    "dining": "Enjoy American cuisine at VIEW Restaurant & Lounge, a restaurant where you can take in the ocean view, or stay in and take advantage of the room service (during limited hours). Relax with a refreshing drink from the poolside bar or one of the 2 bars/lounges. Continental breakfasts are available daily from 6:00 AM to 11:30 AM for a fee.",
+    "headline": "Near Fashion Island",
+    "location": "With a stay at VEA Newport Beach, A Marriott Resort & Spa in Newport Beach (Newport Center), you'll be steps from Fashion Island and a 5-minute drive from University of California, Irvine.  This hotel is 2.8 mi (4.6 km) from Crystal Cove State Park and 2.9 mi (4.7 km) from Balboa Pier.",
+    "rooms": "Stay in one of 400 guestrooms featuring Smart televisions. Your pillowtop bed comes with down comforters and premium bedding. Wireless internet access (surcharge) keeps you connected, and cable programming is available for your entertainment. Private bathrooms with showers feature designer toiletries and hair dryers."
+  }
+}
